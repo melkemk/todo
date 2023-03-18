@@ -1,0 +1,92 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.navbar {
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+a {
+  padding-right: 10%;
+}
+li {
+  padding-right: 50%;
+}
+.main {
+  overflow-y: scroll;
+  height: 400px;
+  background: #d9d9d9;
+  width: 400px;
+  margin: 50px;
+  margin-left: 20%;
+}
+.form-control {
+  width: 150px !important;
+  margin-left: 100px;
+}
+.btn-outline-success,
+.form-control {
+  margin-top: 50px !important;
+}
+.Delete-all {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.book {
+  text-transform: capitalize;
+  position: relative;
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.delete {
+  position: absolute;
+  left: 75.9%;
+  height: 24px;
+}
+.searchBar {
+  margin-left: 20%;
+}
+@media screen and (max-width: 850px) {
+  #addelement {
+    margin-right: 10px;
+    margin-top: 45px !important;
+  }
+}
