@@ -7,9 +7,8 @@ export function MainDev() {
   const [book, setBook] = useState([]);
   const [bookName, setBookName] = useState("");
   const [search, setSearch] = useState("");
-  const [show, setShow] = useState(false);
-  const ShowResult = showAllBooks(book);
-  const filteredList = filteredBooks(book, search.trim(), show);
+  const ShowResult = showAllBooks(book, setBook);
+  const filteredList = filteredBooks(book, search.trim(), setBook);
 
 
   return (<>
@@ -19,9 +18,8 @@ export function MainDev() {
         onChange={(e) => setSearch(e.target.value)} />
 
     </form>
-
+    {/* main dev for contents  */}
     <div className='main'>
-      {/* main dev for contents  */}
       <form className="form-inline" onSubmit={(event) => event.preventDefault()}>
         {/* add element */}
         <input className="form-control mr-sm-2 addelement" id="addelement" type="text" placeholder="Add" aria-label="Search" value={bookName}
@@ -30,7 +28,7 @@ export function MainDev() {
       </form>
 
       {/* main content */}
-      {show || !search ? (ShowResult) : filteredList}
+      {!search ? (ShowResult) : filteredList}
 
       {/* delete button */}
       <div className='books'>

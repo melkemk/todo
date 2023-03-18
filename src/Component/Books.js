@@ -5,19 +5,17 @@ export function showAllBooks(book) {
 
             <div key={index} className='book bg-secondary'>
                 <span className='book-name'>{books}</span>
-                <button className='btn btn-danger delete'>Delete</button> </div>
+                <button className='btn btn-danger delete' onClick={() => alert(4)} >Delete</button> </div>
         )
     })
 }
 
-
-
-export function filteredBooks(books, filter, show) {
-    return !show && books.filter((book) => book.substring(0, filter.length) === filter).map((book, index) => {
+export function filteredBooks(books, filter, setBook) {
+    return books.filter((book) => book.substring(0, filter.length) === filter).map((book, index) => {
         return (
             <div key={index} className='book bg-secondary'>
                 <span className='book-name'>{book}</span>
-                <button className='btn btn-danger delete'>Delete</button>
+                <button className='btn btn-danger delete'  >Delete</button>
             </div>
         )
     })
