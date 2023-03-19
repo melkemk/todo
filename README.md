@@ -1,3 +1,6 @@
+it is a basic todo app you can change it to do anything but this is for books 
+it is react app no back-end 
+
 first run npm install
 
 @:~/npm install
