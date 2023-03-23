@@ -24,7 +24,7 @@ export function MainDev() {
         {/* add element */}
         <input className="form-control mr-sm-2 addelement" id="addelement" type="text" placeholder="Add" aria-label="Search" value={bookName}
           onChange={(e) => setBookName(e.target.value)} />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={() => addBook(bookName, setBook, setBookName)}>Add</button>
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={() => addBook(bookName, book, setBook, setBookName)}>Add</button>
       </form>
 
       {/* main content */}
