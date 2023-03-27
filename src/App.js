@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { addBook, DeleteAll, filteredBooks, showAllBooks } from './Component/Books';
 import './index.css';
@@ -8,8 +8,13 @@ export function MainDev() {
   const [bookName, setBookName] = useState("");
   const [search, setSearch] = useState("");
   const ShowResult = showAllBooks(book, setBook);
-  const filteredList = filteredBooks(book, search.trim(), setBook);
-
+  const filteredList = filteredBooks(book, search.trim(), setBook);2' 
+3
+  useEffect(() => {
+    fetch('http://localhost:5000/', { method: 'GET' })
+      .then(response => response.json()).then((res) => setBook(res['book']))
+      .catch((err) => console.log(err))
+  }, ([]))
 
   return (<>
     {/* search */}
@@ -29,7 +34,6 @@ export function MainDev() {
 
       {/* main content */}
       {!search ? (ShowResult) : filteredList}
-
       {/* delete button */}
       <div className='books'>
       </div>

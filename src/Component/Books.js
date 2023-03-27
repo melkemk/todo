@@ -1,5 +1,3 @@
-
-
 //to add books
 export const addBook = (bookName, book, setBook, setBookName) => {
     //we have to first check if the input is empty string 
@@ -9,13 +7,24 @@ export const addBook = (bookName, book, setBook, setBookName) => {
     }
     bookName !== "" &&
         setBook((t) => [...t, bookName.trim()]);
+    fetch('http://localhost:5000/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ bookName: bookName })
+    }).then(response => response.text())
+        .then(text => {
+            console.log(text); // Log the response from the server
+        }).catch(error => {
+            console.log(error);
+        });
     setBookName("")
 };
 
 
 const deleteIthBook = (book, books, setBook) => {
     setBook(books.filter((x) => x !== book))
-
+    fetch(`http://localhost:5000/${book}`, { method: 'DELETE' })
+        .then(() => this.setState({ status: 'Delete successful' }));
 }
 
 
